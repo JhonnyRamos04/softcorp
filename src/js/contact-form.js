@@ -1,6 +1,7 @@
 // Validación del formulario nuevo
 import emailjs from '@emailjs/browser'
 const apiKey = import.meta.env.PUBLIC_API_KEY
+const serviceKey = import.meta.env.PUBLIC_SERVICE_KEY
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contact-form")
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Enviar el formulario con EmailJS (que ya está inicializado en el layout)
             if (typeof emailjs !== "undefined") {
-                emailjs.sendForm("service_x7zgeyp", "template_nu83u5j", this, { publicKey: apiKey }).then(
+                emailjs.sendForm(serviceKey, "template_nu83u5j", this, { publicKey: apiKey }).then(
                     (response) => {
                         console.log("SUCCESS!", response)
                         if (resultDiv) {
