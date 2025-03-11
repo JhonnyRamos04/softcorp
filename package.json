@@ -37,5 +37,8 @@
     "softcorp": "file:",
     "tailwindcss": "^3.4.3",
     "zod": "^3.24.2"
+  },
+  "resolutions": {
+    "rollup": "npm:@rollup/wasm-node"
   }
 }
